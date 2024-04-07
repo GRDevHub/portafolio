@@ -13,8 +13,15 @@
 <body>
     <header class="header">
 
-        <nav class="nav">
+        <input id="checkbox" type="checkbox">
+        <label class="header__label" for="checkbox">
+                <div id="bar1" class="bars"></div>
+                <div id="bar2" class="bars"></div>
+                <div id="bar3" class="bars"></div>
+        </label>
 
+        <nav class="nav">
+            
             <div class="nav__logo">
                 <i class="bi bi-code-slash"></i>
             </div>
@@ -39,10 +46,9 @@
                 <i class="bi bi-brightness-low-fill"></i>
                 <i class="bi bi-moon-stars-fill"></i>
             </div>
-
-            <label class="nav__label" for="check">
+            <!-- <label class="nav__label" for="check">
                 <input type="checkbox" id="check">
-            </label>
+            </label> -->
 
         </nav>
 
@@ -116,5 +122,7 @@
 
         </div>
     </footer>
+
+    <script prefer src="./js/app.js"></script>
 </body>
 </html>
