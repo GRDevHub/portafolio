@@ -318,7 +318,7 @@ body{
 }
 
 .bi-whatsapp:hover{
-    color: #1a6f19;
+    color: #188616;
 }
 
 .projects__title{
@@ -475,6 +475,14 @@ body{
     font-size: .8rem;
     color: #d0d0d0;
     line-height: 1.4;
+}
+
+.description__link{
+    color: #d0d0d0;
+    text-decoration: underline;
+}
+.description__link:hover{
+    color: #fff;
 }
 
 .card__links {
