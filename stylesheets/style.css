@@ -23,8 +23,56 @@
 body{
     width: 100%;
     font-family: var(--roboto-condensed);
-    background-color: var(--background);
+    /* background-color: var(--background); */
     color: var(--white);
+}
+
+.circles{
+    background-color: rgb(0, 101, 163);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(70px);
+}
+
+.circles__circle{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    fill: #000022;
+    animation: rotate 20s linear infinite forwards;
+}
+
+.circle1{
+    top: 0%;
+    left: 0%;
+}
+
+.circle2{
+    top: 0%;
+    right: 0%;
+}
+
+.circle3{
+    bottom: -10%;
+    left: -10%;
+}
+
+.circle4 {
+    bottom: 0%;
+    right: 0%;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg) scale(4);
+    }
+    100%{
+        transform: rotate(360deg) scale(6);
+    }
 }
 
 .paragraph {
@@ -93,6 +141,7 @@ body{
 .bi {
     font-size: 2.2rem;
 }
+
 .bi:hover{
     border-radius: 50%;
 }
