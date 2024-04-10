@@ -14,6 +14,9 @@
     --white-fixed: #fff;
     --nav-foot: #00000098;
 
+    /* --white: #000;
+    --nav-foot: #ffffff98; */
+
     --roboto-condensed: "Roboto Condensed", sans-serif;
     --playfair-display: "Playfair Display", serif;
 }
@@ -28,10 +31,10 @@ body{
 }
 
 .circles{
-    background-color: rgb(0, 101, 163);
+    background-color: #000047;
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 150%;
     top: 0;
     left: 0;
     z-index: -1;
@@ -43,7 +46,7 @@ body{
     width: 50%;
     height: 50%;
     fill: #000022;
-    animation: rotate 20s linear infinite forwards;
+    animation: rotate 40s infinite cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .circle1{
@@ -57,8 +60,8 @@ body{
 }
 
 .circle3{
-    bottom: -10%;
-    left: -10%;
+    bottom: 0%;
+    left: 0%;
 }
 
 .circle4 {
@@ -67,13 +70,14 @@ body{
 }
 
 @keyframes rotate {
-    0%{
-        transform: rotate(0deg) scale(4);
+    from{
+        transform: rotate(0deg) scale(3);
     }
-    100%{
-        transform: rotate(360deg) scale(6);
+    to{
+        transform: rotate(360deg) scale(3);
     }
 }
+
 
 .paragraph {
     width: 90%;
@@ -108,8 +112,8 @@ body{
 
 .nav__logo {
     /* outline: 1px solid red; */
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 }
 
 .svg {
@@ -142,10 +146,6 @@ body{
     font-size: 2.2rem;
 }
 
-.bi:hover{
-    border-radius: 50%;
-}
-
 .unset {
     opacity: 1;
     transform: translateY(0);
@@ -162,12 +162,12 @@ body{
 
 .header__label {
     position: fixed;
-    background-color: var(--nav-foot); /*#060606a0*/
+    background-color: var(--nav-foot); 
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    border: 1px solid var(--nav-foot); /*#ffffff5c*/
+    border: 1px solid var(--white);
     border-radius: 50%;
-    box-shadow: 0 0 20px -10px var(--white); /*rgb(255, 255, 255)*/
+    box-shadow: 0 0 20px -8px var(--white); /*rgb(255, 255, 255)*/
     bottom: 2em;
     right: 2em;
     width: 70px;
@@ -230,6 +230,10 @@ body{
 
 .main {}
 
+.intro{
+    color: var(--white-fixed);
+}
+
 .section {
     /* background-color: #86868650; */
     margin-bottom: 2rem;
@@ -258,6 +262,7 @@ body{
     text-align: center;
     display: flex;
     flex-direction: column;
+    -webkit-animation: animation both 3s .4s;
     animation: animation both 3s .4s;
 }
 
@@ -267,13 +272,14 @@ body{
 }
 
 .section__link{
-    color: var(--white);
-    border: 2px solid var(--white);
+    color: var(--white-fixed);
+    border: 2px solid var(--white-fixed);
     border-radius: 50px;
     display: block;
     padding: .5rem 1.2rem;
     margin-block: 2em;
     transition: all .3s ease-in;
+    -webkit-animation: animation both 3s .5s;
     animation: animation both 3s .5s;
     cursor: pointer;
 }
@@ -283,7 +289,7 @@ body{
 }
 
 .section__link:hover, .section__link:hover{
-    background-color: var(--white);
+    background-color: var(--white-fixed);
     color: #000;
 }
 
@@ -295,11 +301,24 @@ body{
 .social__link {
     color: currentColor;
     font-size: 2rem;
+    -webkit-animation: animation both 3s .6s;
     animation: animation both 3s .6s;
 }
 
-.social__link:hover {
-    color: #b0b0b0;
+.bi{
+    transition: color .3s ease-out;
+}
+
+.bi-github:hover{
+    color: #4d4d4d;
+}
+
+.bi-linkedin:hover{
+    color: #0036ca;
+}
+
+.bi-whatsapp:hover{
+    color: #1a6f19;
 }
 
 .projects__title{
@@ -313,6 +332,10 @@ body{
 .about__name{
     font-size: 1.2rem;
     font-weight: 400
+}
+
+.skills{
+    color: var(--white-fixed);
 }
 
 .skills__title{
@@ -330,16 +353,20 @@ body{
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    -webkit-transition: all 10s ease;
     transition: all 10s ease;
 }
 
 .skills__container{
     /* outline: 1px solid red; */
     width: 70px;
-    overflow: hidden;
+    padding-inline: 5px;
+    /* overflow: hidden; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    -webkit-transition: filter .2s ease-in,
+    transform .2s ease-out;
     transition: filter .2s ease-in,
                 transform .2s ease-out;
 
@@ -363,6 +390,7 @@ body{
 .skills__paragraph{
     text-align: center;
     font-size: 1.1rem;
+    width: max-content;
 }
 
 .projects{
