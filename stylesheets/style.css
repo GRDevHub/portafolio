@@ -100,7 +100,6 @@ body {
     cursor-pointer: none;
     opacity: .3;
     z-index: 3;
-    animation: animationNav ease-out 2s .2s;
 }
 
 .nav__logo {
@@ -348,7 +347,7 @@ body {
     font-size: 1rem;
 }
 
-.section__link:hover,
+
 .section__link:hover {
     background-color: var(--white-fixed);
     color: #000;
@@ -451,7 +450,7 @@ body {
 }
 
 .projects {
-    animation: animation both 4s .7s;
+    animation: animation ease 2s;
 }
 
 .projects__paragraph {
@@ -627,6 +626,7 @@ body {
         flex-direction: row;
         justify-content: space-between;
         border-radius: 20px;
+        animation: animationNav ease-out 2s;
     }
 
     .nav__lists {
