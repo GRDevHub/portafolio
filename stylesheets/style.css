@@ -40,7 +40,6 @@ a:hover{
     width: 3em;
     height: 3em;
     border-radius: 50%;
-    /* background-color: #fff; */
     border: 2px solid #ffffff;
     top: 0;
     left: 0;
@@ -49,6 +48,7 @@ a:hover{
     mix-blend-mode: difference;
     transition-duration: .15s;
     pointer-events: none;
+    opacity: 0;
 }
 
 #cursor__outline{
@@ -61,6 +61,7 @@ a:hover{
     background-color: white;
     z-index: 6;
     pointer-events: none;
+    opacity: 0;
 }
 
 .circles {
@@ -370,11 +371,7 @@ a:hover{
     position: absolute;
     width: 3px;
     height: 100%;
-    /* left: 50%;
-    right: 0; */
     background-color: #fff;
-    /* position: ; */
-    /* will-change: height; */
     animation: parpadear .6s linear infinite alternate;
 }
 
@@ -648,6 +645,10 @@ a:hover{
 }
 
 @media (width > 662px) {
+
+    #cursor, #cursor__outline{
+        opacity: 1;
+    }
 
     .header__label {
         display: none;
