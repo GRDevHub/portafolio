@@ -37,7 +37,7 @@ const lists = document.querySelectorAll('.nav__list');
 const animationMenu = function(){
     nav.classList.toggle('unset');
     
-    removeAnimation(0);
+    removeAnimation(1);
         
 }
 
@@ -45,7 +45,7 @@ const setCheck = function(){
     if(checkbox.checked){
         checkbox.checked = false;
         nav.classList.remove('unset');
-        removeAnimation(0);
+        removeAnimation(1);
     }
 }
 

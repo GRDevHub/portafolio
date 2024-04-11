@@ -100,7 +100,7 @@ body {
     cursor-pointer: none;
     opacity: .3;
     z-index: 3;
-    animation: animation ease-out 3s .2s;
+    animation: animationNav ease-out 2s .2s;
 }
 
 .nav__logo {
@@ -709,9 +709,23 @@ body {
 @keyframes animation {
     0% {
         opacity: 0;
+        transform: translateY(50%);
     }
-
+    
     100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animationNav {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    
+    100% {
+        transform: translateY(0);
         opacity: 1;
     }
 }
