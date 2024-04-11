@@ -64,6 +64,11 @@ a:hover{
     opacity: 0;
 }
 
+.mini{
+    transform: scale(.7);
+    transition: transform .1s linear;
+}
+
 .circles {
     background-color: #000000;
     position: fixed;
@@ -208,7 +213,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     position: relative;
-    cursor: pointer;
+    cursor: none;
     user-select: none;
     fill: var(--white);
 }

@@ -1,8 +1,10 @@
 const mouse = document.querySelector('#cursor');
 const punto = document.querySelector('#cursor__outline');
 const typing = document.querySelector('.write');
+const links = document.querySelectorAll('a,button,label');
 const text = 'FrontEnd Developer.';
 
+// Seguir trayectoria puntero
 const moverMouse = function(e){
     const posX = e.clientX;
     const posY = e.clientY;
@@ -17,7 +19,7 @@ document.addEventListener('mousemove', moverMouse);
 
 
 
-
+// Escritura titulo
 const efectoText = function(text, i=0){
     typing.textContent += text[i];
     
@@ -26,3 +28,15 @@ const efectoText = function(text, i=0){
 }
 
 setTimeout(() => efectoText(text, 0), 1100)
+
+// Animación puntero
+links.forEach(
+    item => {
+        item.addEventListener('mouseenter', () => {
+            mouse.classList.add('mini');
+        });
+        item.addEventListener('mouseleave', () => {
+            mouse.classList.remove('mini');
+        });
+    }
+);
