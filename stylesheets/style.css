@@ -338,9 +338,9 @@ body {
     padding: .5rem 1.2rem;
     margin-block: 2em;
     transition: all .3s ease-in;
-    -webkit-animation: animation both 3s .5s;
-    animation: animation both 3s .5s;
     cursor: pointer;
+    -webkit-animation: animation both 3s .6s;
+    animation: animation both 3s .6s;
 }
 
 .section__link .bi {
