@@ -337,6 +337,8 @@ a:hover{
 .section {
     margin-bottom: 2rem;
     width: 100%;
+    max-width: 1300px;
+    margin-inline: auto;
     min-height: 80vh;
 
     display: flex;
@@ -660,7 +662,8 @@ a:hover{
     }
 
     .nav {
-        width: unset;
+        width: 95%;
+        max-width: 1600px;
         height: unset;
         transform: unset;
         background-color: var(--nav-foot);
@@ -669,8 +672,7 @@ a:hover{
         top: 1rem;
         left: 0;
         right: 0;
-        /* bottom: unset; */
-        margin-inline: 1rem;
+        margin-inline: auto;
         opacity: unset;
         transition: unset;
 
@@ -730,8 +732,9 @@ a:hover{
     }
 
     .footer {
-        width: unset;
-        margin-inline: 1.2rem;
+        width: 95%;
+        max-width: 1600px;
+        margin-inline: auto;
         flex-direction: row;
         justify-content: space-between;
     }
