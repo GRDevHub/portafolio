@@ -209,6 +209,11 @@ a:hover{
 }
 
 /* Mode Dark - Light */
+.nav__mode{
+    width: 30px;
+    height: 30px;
+}
+
 .mode {
     display: flex;
     justify-content: center;
@@ -220,11 +225,15 @@ a:hover{
 }
 
 .mode__moon {
+    inset: 0;
     position: absolute;
     animation: keyframes-fill 1s ease;
 }
 
 .mode__sun {
+    inset: 0;
+    display: grid;
+    place-content: center;
     position: absolute;
     display: none;
     animation: keyframes-fill 1s both;
@@ -699,7 +708,7 @@ a:hover{
     }
 
     .nav__link {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .section__title {
