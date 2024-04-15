@@ -78,24 +78,25 @@ a:hover{
     left: 0;
     z-index: -1;
     filter: blur(70px);
-    animation: rotate2 60s infinite cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: rotate2 100s infinite cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .circles__circle {
     position: absolute;
     width: 50%;
     height: 50%;
-    fill: #000022;
-    animation: rotate 20s infinite cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    fill: #000e54;
+    animation: rotate 30s infinite cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .circle1 {
     top: 0%;
     left: 0%;
-    fill: #000000;
+    /* fill: #000000; */
 }
 
 .circle2 {
+    /* fill: #000000; */
     top: 0%;
     right: 0%;
 }
@@ -103,13 +104,13 @@ a:hover{
 .circle3 {
     bottom: 0%;
     left: 0%;
-    fill: #000437;
+    /* fill: #000437; */
 }
 
 .circle4 {
     bottom: 0%;
     right: 0%;
-    fill: #000248;
+    /* fill: #000248; */
 }
 
 .paragraph {
@@ -455,9 +456,7 @@ a:hover{
 }
 
 .skills__icons {
-    overflow: hidden;
-    width: 90%;
-    max-width: 1000px;
+    width: 96%;
     padding-block: 4rem;
     display: flex;
     flex-wrap: wrap;
@@ -469,8 +468,13 @@ a:hover{
 }
 
 .skills__container {
-    width: 70px;
-    padding-inline: 5px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #00000098;
+    border: 2px solid #ffffff98;
+    box-shadow: inset 3px 3px 20px -8px var(--white-fixed);
+    padding: 1rem;
+    width: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -478,7 +482,6 @@ a:hover{
         transform .2s ease-out;
     transition: filter .2s ease-in,
         transform .2s ease-out;
-
 }
 
 .skills__img {
@@ -496,8 +499,15 @@ a:hover{
 }
 
 .skills__paragraph {
+    position: absolute;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: #000;
+    border: 1px solid #ffffff98;
+    box-shadow: 0 10px 10px -8px var(--white-fixed);
+    top: calc(-12px);
     text-align: center;
-    font-size: 1.1rem;
+    font-size: .8rem;
     width: max-content;
 }
 
@@ -511,7 +521,6 @@ a:hover{
 
 .projects__cards {
     width: 90%;
-    max-width: 1000px;
     margin-block: 3rem;
     display: flex;
     justify-content: center;
@@ -676,8 +685,7 @@ a:hover{
         opacity: unset;
         transition: unset;
 
-        padding: 1.2rem;
-        padding-inline: 2rem;
+        padding: 1.4rem;
 
         flex-direction: row;
         justify-content: space-between;
@@ -691,7 +699,7 @@ a:hover{
     }
 
     .nav__link {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .section__title {
@@ -708,7 +716,7 @@ a:hover{
     }
 
     .paragraph {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .projects__title {
@@ -727,6 +735,15 @@ a:hover{
         font-size: 1.8rem;
     }
 
+    .card {
+        width: 350px;
+        height: 230px;
+    }
+
+    .card__description {
+        font-size: 1rem;
+    }
+
     .bi {
         font-size: 3rem;
     }
@@ -737,12 +754,40 @@ a:hover{
         margin-inline: auto;
         flex-direction: row;
         justify-content: space-between;
+        padding: 3rem;
+    }
+
+    .footer__contacto{
+        font-size: 1.5rem;
+    }
+
+    .footer__link{
+        font-size: 1.3rem;
     }
 }
 
 @media (width > 768px) {
+
     .skills__container {
-        width: 90px;
+        width: 110px;
+        padding: 1.5rem 1rem;
+    }
+
+    .skills__container:hover{
+        box-shadow: 0 0 20px -3px var(--white-fixed),
+        inset 3px 3px 20px -8px var(--white-fixed);
+    }
+
+    .skills__paragraph{
+        font-size: 1rem;
+        padding-inline: .8rem;
+        top: -15px;
+        opacity: 0;
+        transition: opacity .2s ease;
+    }
+
+    .skills__container:hover .skills__paragraph{
+        opacity: 1;
     }
 }
 
