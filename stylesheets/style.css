@@ -11,6 +11,7 @@
     --background: #000239ea;
     --white: #fff;
     --white-fixed: #fff;
+    --black: #000;
     --nav-foot: #00000098;
     --color-nav-link: #a0a0a0;
     --roboto-condensed: "Roboto Condensed", sans-serif;
@@ -18,15 +19,18 @@
 }
 
 :root[data-theme='light'] {
+    --background: #000239ea;
     --white: #000;
-    --nav-foot: #ffffff98;
     --white-fixed: #fff;
+    --black: #fff;
+    --nav-foot: #ffffff98;
     --color-nav-link: #272727;
     --roboto-condensed: "Roboto Condensed", sans-serif;
     --playfair-display: "Playfair Display", serif;
 }
 
 body {
+    background-color: var(--background);
     width: 100%;
     font-family: var(--roboto-condensed);
     color: var(--white);
@@ -72,7 +76,7 @@ a:hover{
 }
 
 .circles {
-    background-color: #000000;
+    background-color: var(--background);
     position: fixed;
     width: 100%;
     height: 100%;
@@ -80,25 +84,25 @@ a:hover{
     left: 0;
     z-index: -1;
     filter: blur(70px);
-    animation: rotate2 100s infinite cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: rotate2 30s linear infinite both;
 }
 
 .circles__circle {
     position: absolute;
     width: 50%;
     height: 50%;
-    fill: #000e54;
-    animation: rotate 30s infinite cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    /* fill: #000e54; */
+    animation: rotate2 50s linear infinite both;
 }
 
 .circle1 {
     top: 0%;
     left: 0%;
-    /* fill: #000000; */
+    /* fill: #000437; */
 }
 
 .circle2 {
-    /* fill: #000000; */
+    /* fill: #000437; */
     top: 0%;
     right: 0%;
 }
@@ -481,8 +485,6 @@ a:hover{
 .skills__container {
     position: relative;
     border-radius: 10px;
-    background-color: #00000098;
-    border: 2px solid #ffffff98;
     box-shadow: inset 3px 3px 20px -8px var(--white-fixed);
     padding: 1rem;
     width: 90px;
@@ -503,9 +505,10 @@ a:hover{
 .skills__container:hover {
     transition: transform .3s ease-out;
     transform: scale(1.2);
+    box-shadow: inset 3px 3px 20px -8px var(--white-fixed);
 }
 
-.skills__icons:hover>.skills__container:not(:hover) {
+.skills__icons:hover > .skills__container:not(:hover) {
     transform: scale(.9);
 }
 
@@ -514,7 +517,7 @@ a:hover{
     padding: 2px 5px;
     border-radius: 5px;
     background-color: #000;
-    border: 1px solid #ffffff98;
+    border: 1px solid var(--nav-foot);
     box-shadow: 0 10px 10px -8px var(--white-fixed);
     top: calc(-12px);
     text-align: center;
@@ -784,11 +787,6 @@ a:hover{
         padding: 1.5rem 1rem;
     }
 
-    .skills__container:hover{
-        box-shadow: 0 0 20px -3px var(--white-fixed),
-        inset 3px 3px 20px -8px var(--white-fixed);
-    }
-
     .skills__paragraph{
         font-size: 1rem;
         padding-inline: .8rem;
@@ -840,16 +838,6 @@ a:hover{
     100% {
         transform: translateY(0);
         opacity: 1;
-    }
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg) scale(3);
-    }
-
-    to {
-        transform: rotate(360deg) scale(3);
     }
 }
 
