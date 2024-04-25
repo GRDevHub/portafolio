@@ -22,6 +22,8 @@
     --nav-foot: #ffffff98;
     --white-fixed: #fff;
     --color-nav-link: #272727;
+    --roboto-condensed: "Roboto Condensed", sans-serif;
+    --playfair-display: "Playfair Display", serif;
 }
 
 body {
