@@ -22,7 +22,6 @@
     --white: #000;
     --white-fixed: #fff;
     --nav-foot: #ffffff98;
-    --color-nav-link: #272727;
     --roboto-condensed: "Roboto Condensed", sans-serif;
     --playfair-display: "Playfair Display", serif;
 }
@@ -89,7 +88,7 @@ a:hover{
     position: absolute;
     width: 50%;
     height: 50%;
-    /* fill: #000e54; */
+    fill: #00126f;
     animation: rotate2 50s linear infinite both;
 }
 
@@ -481,9 +480,11 @@ a:hover{
 }
 
 .skills__container {
+    background-color: var(--nav-foot);
     position: relative;
+    border: 4px solid var(--white);
     border-radius: 10px;
-    box-shadow: inset 3px 3px 20px -8px var(--white-fixed);
+    box-shadow: inset 3px 3px 20px -8px var(--white);
     padding: 1rem;
     width: 90px;
     display: flex;
@@ -498,12 +499,13 @@ a:hover{
 .skills__img {
     width: 100%;
     aspect-ratio: 1/1;
+    filter: drop-shadow(0 0 4px var(--white));
 }
 
 .skills__container:hover {
     transition: transform .3s ease-out;
     transform: scale(1.2);
-    box-shadow: inset 3px 3px 20px -8px var(--white-fixed);
+    /* box-shadow: inset 3px 3px 20px -8px var(--white-fixed); */
 }
 
 .skills__icons:hover > .skills__container:not(:hover) {
@@ -515,7 +517,7 @@ a:hover{
     padding: 2px 5px;
     border-radius: 5px;
     background-color: #000;
-    border: 1px solid var(--nav-foot);
+    border: 1px solid var(--white-fixed);
     box-shadow: 0 10px 10px -8px var(--white-fixed);
     top: calc(-12px);
     text-align: center;
